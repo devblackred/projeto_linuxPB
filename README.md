@@ -151,9 +151,9 @@ A solução proposta consiste em uma instância EC2, com um sistema de arquivos 
    STATUS=$(systemctl is-active httpd)
    TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
    if [ "$STATUS" = "active" ]; then
-       echo "$TIMESTAMP Apache ONLINE - Tudo OK" >> /home/ec2-user/efs/seu_nome/apache_online.log
+       echo "$TIMESTAMP Apache ONLINE - Tudo Certo" >> /home/ec2-user/efs/seu_nome/apache_online.log
    else
-       echo "$TIMESTAMP Apache OFFLINE - Verifique o serviço" >> /home/ec2-user/efs/seu_nome/apache_offline.log
+       echo "$TIMESTAMP Apache OFFLINE - Servico indisponivel" >> /home/ec2-user/efs/seu_nome/apache_offline.log
    fi
    ```
 3. **Defina as Permissões do Script:**
